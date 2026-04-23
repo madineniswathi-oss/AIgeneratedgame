@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Synth Snake</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: {
+                            cyan: '#0ff',
+                            pink: '#f0f',
+                            purple: '#b026ff',
+                            dark: '#050510',
+                            panel: '#0a0a1a'
+                        }
+                    },
+                    boxShadow: {
+                        'neon-cyan': '0 0 5px theme("colors.neon.cyan"), 0 0 20px theme("colors.neon.cyan")',
+                        'neon-pink': '0 0 5px theme("colors.neon.pink"), 0 0 20px theme("colors.neon.pink")',
+                        'neon-purple': '0 0 5px theme("colors.neon.purple"), 0 0 20px theme("colors.neon.purple")',
+                        'neon-cyan-inner': 'inset 0 0 10px theme("colors.neon.cyan")',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050510;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden; /* Prevent scrolling from arrow keys */
+        }
+        /* Custom scrollbar for a cleaner look if needed */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b026ff;
+            border-radius: 4px;
+        }
+    </style>
+    </head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.js"></script></body>
+</html>
